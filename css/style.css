@@ -973,6 +973,17 @@ h6 {
   margin-right: 2rem;
 }
 
+.compilation-slider__image-more picture {
+  min-width: 120px;
+  height: 100px;
+}
+
+.compilation-slider__image-more picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .compilation-slider__image-more picture:not(:last-child) {
   margin-right: 2rem;
 }
