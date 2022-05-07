@@ -1,0 +1,52 @@
+.warranties {
+  color: var(--color-white);
+  background-image: url("../images/warranties-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 10.4rem;
+  padding-bottom: 11.5rem;
+  position: relative;
+  &__container {
+    display: flex;
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7.5rem;
+    width: 70%;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    margin-top: 8rem;
+  }
+  &__item {
+    display: flex;
+    width: 32%;
+  }
+  &__item-img {
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+  }
+  &__item-descr {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-left: 4.5rem;
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+  }
+}

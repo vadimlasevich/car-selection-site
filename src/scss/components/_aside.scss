@@ -1,0 +1,35 @@
+.aside {
+  position: fixed;
+  top: 0;
+  right: -50rem;
+  opacity: 0;
+  transition: all 0.8s;
+  background-color: var(--color-cinder);
+  padding: 4rem 3em;
+  &__content {
+    margin-top: 4rem;
+  }
+  &__contacts {
+    & .header__phone {
+      margin-top: 1rem;
+    }
+    & .header__social-networks {
+      margin: 3rem 0;
+    }
+  }
+  &__nav-item {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    & .header__nav-link {
+      font-weight: normal;
+    }
+  }
+  &__btn {
+    margin-top: 3rem;
+  }
+}
+.aside-active {
+  opacity: 1;
+  right: 0;
+}

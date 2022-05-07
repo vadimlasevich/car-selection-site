@@ -3,14 +3,19 @@ export function heroSliderRoll() {
   const slides = document.querySelectorAll(".hero__slide");
   const sliderContainer = document.querySelector(".hero__slider-container");
 
-  let slideHeight = slides[0].offsetHeight;
-  sliderContainer.style.height = slideHeight + "px";
+  let slideHeight;
 
   function heroActiveButton(i) {
     sliderButtons.forEach((button) => {
       button.classList.remove("number-active");
     });
     sliderButtons[i].classList.add("number-active");
+  }
+
+  function init() {
+    slideHeight = slides[1].offsetHeight;
+    sliderContainer.style.height = slideHeight + "px";
+    rollSlider();
   }
 
   function rollSlider(index) {
@@ -23,4 +28,7 @@ export function heroSliderRoll() {
       rollSlider(indexbutton);
     });
   });
+
+  window.addEventListener("resize", init);
+  init();
 }

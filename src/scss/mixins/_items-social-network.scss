@@ -6,4 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  &:hover {
+    .social-network {
+      fill: var(--color-red-devil);
+    }
+  }
 }

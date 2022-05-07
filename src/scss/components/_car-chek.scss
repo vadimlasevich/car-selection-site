@@ -1,0 +1,97 @@
+.car-chek {
+  padding: 10rem 0 9rem 0;
+  background-image: url("../images/car-chek_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+  &::before {
+    content: url("../images/car-chek_background-dark.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    width: 30%;
+    overflow: hidden;
+  }
+  &__image {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 80rem;
+    height: 50rem;
+    z-index: -1;
+  }
+  &__slider {
+    margin-top: 4.7rem;
+    max-width: 91rem;
+    overflow: hidden;
+  }
+  &__slider-container {
+    display: flex;
+    transition: all 1s ease;
+  }
+  &__slider-slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+  &__slider-item {
+    background: #fff;
+    box-shadow: 0px 6px 30px rgba(136, 144, 160, 0.15);
+    border-radius: 12px;
+    padding: 3.2rem 2rem 5.9rem 2rem;
+    text-align: center;
+    width: calc(32.1% - (30px / 3));
+    display: flex;
+    flex-direction: column;
+  }
+  &__item-img {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-descr {
+    margin-top: 3rem;
+  }
+  &__item-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    color: var(--color-cinder);
+    margin: 0 0 1.8rem 0;
+  }
+  &__item-subtitle {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--color-regent-gray);
+  }
+  &__slider-buttons {
+    display: flex;
+    margin: 3.5rem 0 0 36rem;
+  }
+  &__slider-btn {
+    width: 50px;
+    height: 4px;
+    background: #d3d7e0;
+    transform: skew(-60deg);
+    transition: all 0.8s ease;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 2.2rem;
+    }
+  }
+}
+.btn-active {
+  background: #3874cb;
+  width: 75px;
+}
