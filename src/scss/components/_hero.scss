@@ -1,0 +1,129 @@
+.hero {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-white);
+  z-index: 4;
+  &__slider {
+    position: relative;
+    overflow: hidden;
+  }
+  &__slider-container {
+    position: relative;
+    top: 0;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  &__slide {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  &__slide-content button {
+    margin-bottom: 10rem;
+  }
+  &__title {
+    font-weight: 200;
+    font-size: 4.8rem;
+    line-height: 7.6rem;
+    text-transform: uppercase;
+    width: 80%;
+  }
+  &__subtitle {
+    font-weight: 200;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    width: 50%;
+    margin-top: 2.3rem;
+  }
+  &__description {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin: 4.5rem 0 5rem 0;
+  }
+  &__item-description {
+    padding-left: 2.7rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    width: 31%;
+    position: relative;
+    &::before {
+      content: url("../images/check.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__slider-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+  }
+  &__slide-image {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+  }
+  &__slide-label {
+    position: absolute;
+    top: 0;
+    right: 5rem;
+    width: 12.1rem;
+    height: 12.1rem;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    text-align: center;
+    background-image: url(../images/red-star.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.slide-label {
+  &__title {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    font-weight: 400;
+  }
+}
+.slider-navigation {
+  &__number {
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 7.6rem;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+  }
+  &__line {
+    display: block;
+    height: 35px;
+    width: 1px;
+    background: var(--color-white);
+  }
+}
+.number-active {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--color-white);
+  user-select: none;
+  outline: none;
+}
