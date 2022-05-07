@@ -56,6 +56,7 @@
     line-height: 1.6rem;
     width: 31%;
     position: relative;
+    z-index: 20;
     &::before {
       content: url("../images/check.svg");
       position: absolute;

@@ -4,6 +4,9 @@ export function heroSliderRoll() {
   const sliderContainer = document.querySelector(".hero__slider-container");
 
   let slideHeight;
+  let index = 0;
+  let marginSlide = getComputedStyle(slides[0]).marginBottom;
+  let marginSlideNumber = parseInt(marginSlide.substring(0, marginSlide.length - 2));
 
   function heroActiveButton(i) {
     sliderButtons.forEach((button) => {
@@ -15,11 +18,11 @@ export function heroSliderRoll() {
   function init() {
     slideHeight = slides[1].offsetHeight;
     sliderContainer.style.height = slideHeight + "px";
-    rollSlider();
+    rollSlider(index);
   }
 
   function rollSlider(index) {
-    sliderContainer.style.transform = "translateY(-" + index * slideHeight + "px)";
+    sliderContainer.style.transform = `translateY(-${(marginSlideNumber + slideHeight) * index}px)`;
   }
 
   sliderButtons.forEach((button, indexbutton) => {

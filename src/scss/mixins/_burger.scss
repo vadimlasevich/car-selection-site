@@ -1,0 +1,28 @@
+@mixin burger {
+  position: relative;
+  z-index: 110;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
+  & span,
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--color-white);
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+}

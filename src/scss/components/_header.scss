@@ -46,35 +46,9 @@
       border-bottom: 1.5px solid var(--color-mariner);
     }
   }
-  &__burger {
-    position: relative;
-    z-index: 100;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 3rem;
-    cursor: pointer;
-    & span,
-    &::before,
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      background-color: var(--color-white);
-    }
-    &::before {
-      position: absolute;
-      top: 0;
-
-      transition: all 0.5s;
-    }
-    &::after {
-      position: absolute;
-      bottom: 0;
-      transition: all 0.5s;
-    }
-  }
+}
+.burger {
+  @include burger;
 }
 .burger-rotate {
   & span {
