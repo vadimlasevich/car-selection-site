@@ -973,6 +973,10 @@ h6 {
   margin-right: 2rem;
 }
 
+.compilation-slider__image-more picture:not(:last-child) {
+  margin-right: 2rem;
+}
+
 .compilation-slider__title {
   font-size: 2.4rem;
   color: var(--color-cinder);
