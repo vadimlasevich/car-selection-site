@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../images/background.jpg");
+  background-image: url('../images/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,22 +7,15 @@
   z-index: 4;
   &__slider {
     position: relative;
+  }
+  &__slider-wrapper {
     overflow: hidden;
+    max-height: 55rem;
   }
   &__slider-container {
-    position: relative;
-    top: 0;
     transition: all 1s ease;
     display: flex;
     flex-direction: column;
-  }
-  &__slide {
-    position: relative;
-    top: 0;
-    left: 0;
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-    }
   }
   &__slide-content button {
     margin-bottom: 10rem;
@@ -58,7 +51,7 @@
     position: relative;
     z-index: 20;
     &::before {
-      content: url("../images/check.svg");
+      content: url('../images/check.svg');
       position: absolute;
       top: 0;
       left: 0;

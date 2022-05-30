@@ -3,35 +3,22 @@ export const heroSliderRoll = () => {
   const slides = document.querySelectorAll('.hero__slide');
   const sliderContainer = document.querySelector('.hero__slider-container');
 
-  let slideHeight;
-  let index = 0;
-  let marginSlide = getComputedStyle(slides[0]).marginBottom;
-  let marginSlideNumber = parseInt(marginSlide.substring(0, marginSlide.length - 2));
-
-  function heroActiveButton(i) {
+  const activeButton = (index) => {
     sliderButtons.forEach((button) => {
       button.classList.remove('number-active');
     });
-    sliderButtons[i].classList.add('number-active');
-  }
+    sliderButtons[index].classList.add('number-active');
+  };
 
-  function init() {
-    slideHeight = slides[1].offsetHeight;
-    sliderContainer.style.height = slideHeight + 'px';
-    rollSlider(index);
-  }
+  const rollSlider = (index) => {
+    let slideHeight = slides[0].offsetHeight;
+    sliderContainer.style.transform = `translateY(-${slideHeight * index}px)`;
+  };
 
-  function rollSlider(index) {
-    sliderContainer.style.transform = `translateY(-${(marginSlideNumber + slideHeight) * index}px)`;
-  }
-
-  sliderButtons.forEach((button, indexbutton) => {
+  sliderButtons.forEach((button, indexButton) => {
     button.addEventListener('click', () => {
-      heroActiveButton(indexbutton);
-      rollSlider(indexbutton);
+      activeButton(indexButton);
+      rollSlider(indexButton);
     });
   });
-
-  window.addEventListener('resize', init);
-  init();
 };

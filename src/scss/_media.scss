@@ -241,6 +241,9 @@
     }
   }
   .hero {
+    &__slider-wrapper {
+      max-height: 44rem;
+    }
     &__slide-label {
       top: 13rem;
       right: 3rem;
@@ -434,10 +437,16 @@
   :root {
     font-size: 8px;
   }
-  .hero__title {
-    font-size: 3rem;
-    line-height: 5rem;
+  .hero {
+    &__title {
+      font-size: 3rem;
+      line-height: 5rem;
+    }
+    &__slider-wrapper {
+      max-height: 42rem;
+    }
   }
+
   .section-title {
     font-size: 2.5rem;
     line-height: 5rem;
@@ -512,6 +521,9 @@
     width: 100%;
   }
   .hero {
+    &__slider-wrapper {
+      max-height: 57rem;
+    }
     &__subtitle {
       width: 95%;
       margin: 1.8rem 0 3rem 0;
@@ -577,6 +589,9 @@
 }
 @media screen and (max-width: 432px) {
   .hero {
+    &__slider-wrapper {
+      max-height: 40rem;
+    }
     &__slide-image,
     &__slide-label {
       display: none;
@@ -587,5 +602,15 @@
   }
   .car-chek__slider-item {
     width: 100%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .hero__slider-wrapper {
+    max-height: 42rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .hero__slider-wrapper {
+    max-height: 48rem;
   }
 }
