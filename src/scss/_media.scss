@@ -150,10 +150,10 @@
     &__slider {
       width: 100%;
     }
-    &__slider-slide {
-      row-gap: 1.5rem;
-      column-gap: 1.5rem;
-    }
+  }
+  .car-chek-slider__slide {
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .warranties {
     &__item {
@@ -585,8 +585,6 @@
       margin-bottom: 5rem;
     }
   }
-}
-@media screen and (max-width: 353px) {
   .car-chek__slider-item {
     width: 100%;
   }

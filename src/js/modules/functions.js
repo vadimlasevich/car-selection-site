@@ -5,11 +5,11 @@ export function isWebp() {
     webP.onload = webP.onerror = function () {
       callback(webP.height == 2);
     };
-    webP.src = "";
+    webP.src = '';
   }
 
   testWebp(function (support) {
-    let className = support == true ? "webp" : "no-webp";
+    let className = support === true ? 'webp' : 'no-webp';
     document.documentElement.classList.add(className);
   });
 }

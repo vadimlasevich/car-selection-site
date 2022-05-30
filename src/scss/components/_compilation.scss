@@ -13,6 +13,7 @@
     transition: all 1s ease;
   }
   &__slide {
+    min-width: 100%;
     display: flex;
   }
   &__slide-images {
@@ -34,6 +35,13 @@
       }
     }
     & picture {
+      min-width: 120px;
+      height: 100px;
+      & img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
       &:not(:last-child) {
         margin-right: 2rem;
       }
@@ -114,7 +122,7 @@
     justify-content: center;
     margin: 0 auto;
   }
-  &__button {
+  &__btn {
     font-weight: normal;
     font-size: 1.4rem;
     line-height: 7.6rem;
@@ -133,13 +141,13 @@
       margin-right: 4.8rem;
     }
   }
-  &__btn-active {
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 7.6rem;
-    color: var(--color-fun-blue);
-    text-decoration-line: none;
-    user-select: none;
-    outline: none;
-  }
+}
+.compilation-btn-active {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 7.6rem;
+  color: var(--color-fun-blue);
+  text-decoration-line: none;
+  user-select: none;
+  outline: none;
 }

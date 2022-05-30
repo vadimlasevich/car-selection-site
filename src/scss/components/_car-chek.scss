@@ -1,13 +1,13 @@
 .car-chek {
   padding: 10rem 0 9rem 0;
-  background-image: url("../images/car-chek_background.png");
+  background-image: url('../images/car-chek_background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 10;
   &::before {
-    content: url("../images/car-chek_background-dark.png");
+    content: url('../images/car-chek_background-dark.png');
     position: absolute;
     top: 0;
     right: 0;
@@ -27,21 +27,6 @@
     margin-top: 4.7rem;
     max-width: 91rem;
     overflow: hidden;
-  }
-  &__slider-container {
-    display: flex;
-    transition: all 1s ease;
-  }
-  &__slider-slide {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 3rem;
-    column-gap: 3rem;
-    &:not(:last-child) {
-      margin-right: 4rem;
-    }
   }
   &__slider-item {
     background: #fff;
@@ -79,7 +64,22 @@
     display: flex;
     margin: 3.5rem 0 0 36rem;
   }
-  &__slider-btn {
+}
+.car-chek-slider {
+  &__container {
+    display: flex;
+    transition: all 1s ease;
+  }
+  &__slide {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    padding: 0 2.2rem;
+  }
+  &__btn {
     width: 50px;
     height: 4px;
     background: #d3d7e0;
@@ -91,7 +91,7 @@
     }
   }
 }
-.btn-active {
+.car-chek-btn-active {
   background: #3874cb;
   width: 75px;
 }
