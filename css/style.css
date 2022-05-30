@@ -687,33 +687,6 @@ h6 {
   overflow: hidden;
 }
 
-.car-chek__slider-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.car-chek__slider-slide {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  row-gap: 3rem;
-  -webkit-column-gap: 3rem;
-     -moz-column-gap: 3rem;
-          column-gap: 3rem;
-}
-
-.car-chek__slider-slide:not(:last-child) {
-  margin-right: 4rem;
-}
-
 .car-chek__slider-item {
   background: #fff;
   -webkit-box-shadow: 0px 6px 30px rgba(136, 144, 160, 0.15);
@@ -770,7 +743,31 @@ h6 {
   margin: 3.5rem 0 0 36rem;
 }
 
-.car-chek__slider-btn {
+.car-chek-slider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.car-chek-slider__slide {
+  min-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 3rem;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
+  padding: 0 2.2rem;
+}
+
+.car-chek-slider__btn {
   width: 50px;
   height: 4px;
   background: #d3d7e0;
@@ -783,11 +780,11 @@ h6 {
   cursor: pointer;
 }
 
-.car-chek__slider-btn:not(:last-child) {
+.car-chek-slider__btn:not(:last-child) {
   margin-right: 2.2rem;
 }
 
-.btn-active {
+.car-chek-btn-active {
   background: #3874cb;
   width: 75px;
 }
@@ -942,6 +939,7 @@ h6 {
 }
 
 .compilation-slider__slide {
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1098,7 +1096,7 @@ h6 {
   margin: 0 auto;
 }
 
-.compilation-slider__button {
+.compilation-slider__btn {
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 7.6rem;
@@ -1117,17 +1115,17 @@ h6 {
   outline: none;
 }
 
-.compilation-slider__button:hover {
+.compilation-slider__btn:hover {
   color: var(--color-mariner);
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
 
-.compilation-slider__button:not(:last-child) {
+.compilation-slider__btn:not(:last-child) {
   margin-right: 4.8rem;
 }
 
-.compilation-slider__btn-active {
+.compilation-btn-active {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 7.6rem;
@@ -1616,7 +1614,7 @@ h6 {
     width: 100%;
   }
 
-  .car-chek__slider-slide {
+  .car-chek-slider__slide {
     row-gap: 1.5rem;
     -webkit-column-gap: 1.5rem;
        -moz-column-gap: 1.5rem;
@@ -2173,9 +2171,7 @@ h6 {
   .hero__description {
     margin-bottom: 5rem;
   }
-}
 
-@media screen and (max-width: 353px) {
   .car-chek__slider-item {
     width: 100%;
   }
