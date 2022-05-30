@@ -384,12 +384,14 @@ h6 {
 
 .hero__slider {
   position: relative;
+}
+
+.hero__slider-wrapper {
   overflow: hidden;
+  max-height: 55rem;
 }
 
 .hero__slider-container {
-  position: relative;
-  top: 0;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
@@ -400,16 +402,6 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.hero__slide {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.hero__slide:not(:last-child) {
-  margin-bottom: 2rem;
 }
 
 .hero__slide-content button {
@@ -1720,6 +1712,10 @@ h6 {
     font-size: 1.2rem;
   }
 
+  .hero__slider-wrapper {
+    max-height: 44rem;
+  }
+
   .hero__slide-label {
     top: 13rem;
     right: 3rem;
@@ -1987,6 +1983,10 @@ h6 {
     line-height: 5rem;
   }
 
+  .hero__slider-wrapper {
+    max-height: 42rem;
+  }
+
   .section-title {
     font-size: 2.5rem;
     line-height: 5rem;
@@ -2082,6 +2082,10 @@ h6 {
     width: 100%;
   }
 
+  .hero__slider-wrapper {
+    max-height: 57rem;
+  }
+
   .hero__subtitle {
     width: 95%;
     margin: 1.8rem 0 3rem 0;
@@ -2163,6 +2167,10 @@ h6 {
 }
 
 @media screen and (max-width: 432px) {
+  .hero__slider-wrapper {
+    max-height: 40rem;
+  }
+
   .hero__slide-image,
   .hero__slide-label {
     display: none;
@@ -2174,6 +2182,18 @@ h6 {
 
   .car-chek__slider-item {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .hero__slider-wrapper {
+    max-height: 42rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .hero__slider-wrapper {
+    max-height: 48rem;
   }
 }
 
